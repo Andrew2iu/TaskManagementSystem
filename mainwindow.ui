@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 窗口背景 */
+QMainWindow { background-color: #f5f6fa; }
+
+/* 右侧 Frame 美化 */
+QFrame#editPanel {
+    background-color: white;
+    border: 1px solid #dcdde1;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+/* 搜索框圆角 */
+QLineEdit#searchLineEdit {
+    padding: 6px;
+    border-radius: 15px;
+    border: 1px solid #dcdde1;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+QPushButton#deleteTaskBtn {
+    background-color: #e74c3c; /* 删除按钮红色 */
+}
+QPushButton:hover {
+    background-color: #357abd;
+}
+QListWidget::item:selected {
+    background-color: #ecf0f1; /* 浅灰色选中背景 */
+    color: inherit;            /* 保持我们通过代码设置的字体颜色 */
+    border-left: 5px solid #3498db; 
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="searchLineEdit"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="sortComboBox"/>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidget"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addTaskBtn">
+         <property name="text">
+          <string>添加任务</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="editPanel">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="7" column="1">
+        <widget class="QPushButton" name="saveEditBtn">
+         <property name="text">
+          <string>保存修改</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QPushButton" name="deleteTaskBtn">
+         <property name="text">
+          <string>删除任务</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>任务名称</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="editName"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>任务描述</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>截止时间</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QTextEdit" name="editDesc"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDateTimeEdit" name="editDeadline"/>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="editPriority"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>优先级</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QCheckBox" name="checkCompleted">
+         <property name="text">
+          <string>已完成</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>完成情况</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
