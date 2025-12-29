@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 主窗口背景 */
+QMainWindow {
+    background-color: #f5f6fa;
+}
+
+/* 按钮美化 */
+QPushButton {
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #357abd;
+}
+QPushButton#deleteTaskBtn {
+    background-color: #e74c3c; /* 删除按钮使用红色 */
+}
+
+/* 输入框（搜索框） */
+QLineEdit {
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    padding: 5px;
+    background: white;
+}
+
+/* 表格美化 */
+QTableView {
+    background-color: white;
+    border: 1px solid #dcdde1;
+    gridline-color: #f1f2f6;
+    selection-background-color: #4a90e2;
+}
+QHeaderView::section {
+    background-color: #f8f9fa;
+    padding: 4px;
+    border: 1px solid #dcdde1;
+    font-weight: bold;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="searchLineEdit">
+        <property name="placeholderText">
+         <string>🔍 输入任务名称搜索...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addTaskBtn">
+        <property name="text">
+         <string>添加任务</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="exportBtn">
+        <property name="text">
+         <string>导出任务</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteTaskBtn">
+        <property name="text">
+         <string>删除任务</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableView" name="tableView">
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
