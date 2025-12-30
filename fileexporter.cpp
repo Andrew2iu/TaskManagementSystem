@@ -8,7 +8,7 @@
 #include <QPainter>
 #include <QDateTime>
 
-// 导出为 Excel
+// 导出为 Excel 1
 void exportToExcel(QAbstractItemModel *model)
 {
     if (!model) return;
@@ -28,7 +28,7 @@ void exportToExcel(QAbstractItemModel *model)
                 << (isDone ? "已完成" : "待处理") << "\n";
         }
         file.close();
-        QMessageBox::information(nullptr, "提示", "Excel 导出成功！");
+        QMessageBox::information(nullptr, "提示", "Excel 导出成功！")
     }
 }
 
