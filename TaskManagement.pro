@@ -1,5 +1,4 @@
-QT += core gui sql network widgets
-
+QT += core gui sql network printsupport
 # 启用 C++17 标准
 CONFIG += c++17
 

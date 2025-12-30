@@ -1,5 +1,6 @@
 #ifndef REMINDERWORKER_H
 #define REMINDERWORKER_H
+
 #include <QObject>
 
 class ReminderWorker : public QObject
@@ -7,9 +8,12 @@ class ReminderWorker : public QObject
     Q_OBJECT
 public:
     explicit ReminderWorker(QObject *parent = nullptr) : QObject(parent) {}
+
 public slots:
-    void process();
+    void process(); // 线程执行函数
+
 signals:
-    void reminderSignal(const QString &name, const QString &time);
+    void reminderSignal(const QString &name, const QString &time); // 提醒信号
 };
-#endif
+
+#endif // REMINDERWORKER_H

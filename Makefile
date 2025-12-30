@@ -248,6 +248,7 @@ Makefile: TaskManagement.pro ../../Qt/Qt5.12.11/5.12.11/mingw73_64/mkspecs/win32
 		../../Qt/Qt5.12.11/5.12.11/mingw73_64/mkspecs/features/yacc.prf \
 		../../Qt/Qt5.12.11/5.12.11/mingw73_64/mkspecs/features/lex.prf \
 		TaskManagement.pro \
+		../../Qt/Qt5.12.11/5.12.11/mingw73_64/lib/Qt5PrintSupport.prl \
 		../../Qt/Qt5.12.11/5.12.11/mingw73_64/lib/Qt5Widgets.prl \
 		../../Qt/Qt5.12.11/5.12.11/mingw73_64/lib/Qt5Gui.prl \
 		../../Qt/Qt5.12.11/5.12.11/mingw73_64/lib/Qt5Sql.prl \
@@ -440,6 +441,7 @@ Makefile: TaskManagement.pro ../../Qt/Qt5.12.11/5.12.11/mingw73_64/mkspecs/win32
 ../../Qt/Qt5.12.11/5.12.11/mingw73_64/mkspecs/features/yacc.prf:
 ../../Qt/Qt5.12.11/5.12.11/mingw73_64/mkspecs/features/lex.prf:
 TaskManagement.pro:
+../../Qt/Qt5.12.11/5.12.11/mingw73_64/lib/Qt5PrintSupport.prl:
 ../../Qt/Qt5.12.11/5.12.11/mingw73_64/lib/Qt5Widgets.prl:
 ../../Qt/Qt5.12.11/5.12.11/mingw73_64/lib/Qt5Gui.prl:
 ../../Qt/Qt5.12.11/5.12.11/mingw73_64/lib/Qt5Sql.prl:

@@ -4,12 +4,10 @@
 #include <QSqlError>
 #include <QDebug>
 
-// 在此处初始化静态变量
 const QString SqlRepository::MAIN_CONN = "main_task_connection";
 
 bool SqlRepository::initDatabase()
 {
-    // 使用指定的连接名
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", MAIN_CONN);
     db.setDatabaseName("task_manager.db");
     if (!db.open()) {
@@ -18,6 +16,7 @@ bool SqlRepository::initDatabase()
     }
 
     QSqlQuery query(db);
+    // 增加 category 字段，默认为 '默认'
     return query.exec("CREATE TABLE IF NOT EXISTS task ("
                       "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                       "name TEXT NOT NULL, "
@@ -25,5 +24,6 @@ bool SqlRepository::initDatabase()
                       "deadline TEXT NOT NULL, "
                       "priority INTEGER DEFAULT 2, "
                       "is_completed INTEGER DEFAULT 0, "
-                      "create_time TEXT NOT NULL)");
+                      "create_time TEXT NOT NULL, "
+                      "category TEXT DEFAULT '默认')");
 }

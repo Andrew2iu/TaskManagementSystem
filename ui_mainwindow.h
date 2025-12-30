@@ -38,8 +38,10 @@ public:
     QVBoxLayout *verticalLayout_2;
     QLineEdit *searchLineEdit;
     QComboBox *sortComboBox;
+    QComboBox *filterCategoryCombo;
     QListWidget *listWidget;
     QPushButton *addTaskBtn;
+    QPushButton *exportBtn;
     QFrame *editPanel;
     QFormLayout *formLayout;
     QPushButton *saveEditBtn;
@@ -54,6 +56,8 @@ public:
     QLabel *label_4;
     QCheckBox *checkCompleted;
     QLabel *label_5;
+    QComboBox *editCategory;
+    QLabel *label_6;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -117,6 +121,11 @@ public:
 
         verticalLayout_2->addWidget(sortComboBox);
 
+        filterCategoryCombo = new QComboBox(widget);
+        filterCategoryCombo->setObjectName(QString::fromUtf8("filterCategoryCombo"));
+
+        verticalLayout_2->addWidget(filterCategoryCombo);
+
         listWidget = new QListWidget(widget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
 
@@ -126,6 +135,11 @@ public:
         addTaskBtn->setObjectName(QString::fromUtf8("addTaskBtn"));
 
         verticalLayout_2->addWidget(addTaskBtn);
+
+        exportBtn = new QPushButton(widget);
+        exportBtn->setObjectName(QString::fromUtf8("exportBtn"));
+
+        verticalLayout_2->addWidget(exportBtn);
 
 
         horizontalLayout->addWidget(widget);
@@ -196,6 +210,16 @@ public:
 
         formLayout->setWidget(3, QFormLayout::LabelRole, label_5);
 
+        editCategory = new QComboBox(editPanel);
+        editCategory->setObjectName(QString::fromUtf8("editCategory"));
+
+        formLayout->setWidget(4, QFormLayout::FieldRole, editCategory);
+
+        label_6 = new QLabel(editPanel);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        formLayout->setWidget(4, QFormLayout::LabelRole, label_6);
+
 
         horizontalLayout->addWidget(editPanel);
 
@@ -213,6 +237,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         addTaskBtn->setText(QApplication::translate("MainWindow", "\346\267\273\345\212\240\344\273\273\345\212\241", nullptr));
+        exportBtn->setText(QApplication::translate("MainWindow", "\345\257\274\345\207\272\346\212\245\350\241\250", nullptr));
         saveEditBtn->setText(QApplication::translate("MainWindow", "\344\277\235\345\255\230\344\277\256\346\224\271", nullptr));
         deleteTaskBtn->setText(QApplication::translate("MainWindow", "\345\210\240\351\231\244\344\273\273\345\212\241", nullptr));
         label->setText(QApplication::translate("MainWindow", "\344\273\273\345\212\241\345\220\215\347\247\260", nullptr));
@@ -221,6 +246,7 @@ public:
         label_4->setText(QApplication::translate("MainWindow", "\344\274\230\345\205\210\347\272\247", nullptr));
         checkCompleted->setText(QApplication::translate("MainWindow", "\345\267\262\345\256\214\346\210\220", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "\345\256\214\346\210\220\346\203\205\345\206\265", nullptr));
+        label_6->setText(QApplication::translate("MainWindow", "\345\210\206\347\261\273", nullptr));
     } // retranslateUi
 
 };
