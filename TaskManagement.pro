@@ -19,4 +19,4 @@ HEADERS += mainwindow.h \
 FORMS += mainwindow.ui
 
 # 建议：防止路径中存在空格导致编译失败，设置输出目录
-DESTDIR = bin;
+DESTDIR = bin
